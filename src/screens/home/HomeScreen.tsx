@@ -1,6 +1,13 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {Text, View} from 'react-native';
+import {IconHome} from '../../assets/icons/tabs/IconHome';
 
 export const HomeScreen = () => {
-  return <Text>HomeScreen</Text>;
+  return (
+    <View>
+      <Text>HomeScreen</Text>
+      <IconHome />
+      <IconHome sizeX={133} sizeY={133} color={'red'} />
+    </View>
+  );
 };

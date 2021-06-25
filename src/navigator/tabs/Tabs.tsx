@@ -3,8 +3,10 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {screens} from '../consts/screens';
 import Navigation from '../../base/Navigation';
-import {HomeScreen} from "../../screens/home/HomeScreen";
-import {BasketScreen} from "../../screens/home/BasketScreen";
+import {HomeScreen} from '../../screens/home/HomeScreen';
+import {BasketScreen} from '../../screens/home/BasketScreen';
+import {IconHome} from '../../assets/icons/tabs/IconHome';
+import {IconBasket} from "../../assets/icons/tabs/IconBasket";
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +28,9 @@ export const Tabs = () => {
         component={HomeScreen}
         options={({route}: any) => ({
           tabBarLabel: 'Главная',
-          // tabBarIcon: ({ focused }) => (focused ? <FocusedIcon /> : <Icon />),
+          tabBarIcon: ({focused}) => (
+            <IconHome color={focused ? 'red' : 'gray'} />
+          ),
         })}
       />
 
@@ -35,8 +39,9 @@ export const Tabs = () => {
         component={BasketScreen}
         options={({route}: any) => ({
           tabBarLabel: 'Корзина',
-          // tabBarIcon: ({ focused }) => (focused ? <FocusedIcon /> : <Icon />),
-          // tabBarVisible: getTabBarVisible(route),
+          tabBarIcon: ({focused}) => (
+            <IconBasket color={focused ? 'red' : 'gray'} />
+          ),
         })}
       />
     </Tab.Navigator>
