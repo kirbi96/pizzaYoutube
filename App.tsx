@@ -1,10 +1,12 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import Navigator from './src/navigator/Navigator';
 
 const App = () => {
   return (
+    // <SafeArea
     <SafeAreaView style={styles.container}>
-      <Text>123123</Text>
+      <Navigator />
     </SafeAreaView>
   );
 };
