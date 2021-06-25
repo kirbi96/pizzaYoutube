@@ -1,2 +1,0 @@
-# pizzaYoutube
-react-native app
